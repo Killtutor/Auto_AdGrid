@@ -1,0 +1,26 @@
+{
+  "name": "Automatic AdGrid",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "http://adf.ly/1cNfdT"
+    },
+  "scripts": {
+    "Server": "node autoclick.js"
+    },
+
+  "dependencies": {
+        "express": "^4.14.0"
+    },
+  "license": "Apache 2.0",
+  "engines": {
+    "node": ">= 0.10.0"
+    },
+  "files": [
+    "LICENSE",
+    "Principal.html",
+    "Readme.md",
+    "autoclick.js",
+    
+    ]
+}

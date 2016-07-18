@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>AdGrid Auto</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Reenie+Beanie:regular" rel="stylesheet">
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+<link href="https://www.buxenger.com/app/styles/all" rel="stylesheet">
+<script>
+console.log("Hola Consola");
+var escucha = "/Sense"
+function clickeado(id) {
+	console.log("Click");
+	if (id.id =="Cash") {escucha = "/Pig";
+	console.log("Click Pig");
+
+						document.getElementById("Click").className='unselected enable';
+
+						document.getElementById(id.id).className="selected enable";
+						
+					    var source = new EventSource(escucha);
+					    console.log(source);
+					    source.onmessage =function(event) {
+					    	console.log(event);
+					    	document.getElementById("page").src=event.data;
+					    //document.getElementById("result").innerHTML += event.data + "<br>";
+						};
+
+						source.onerror = function(event) {
+							console.log(event);
+						    document.getElementById("result").innerHTML += event.data + "<br>";
+						};
+						    
+						    console.log(source);
+
+						}
+	else if (id.id=="Click") {escucha = "Sense"; 
+	console.log("Click Sense");
+
+							document.getElementById(id.id).className='selected enable';
+
+							document.getElementById("Cash").className="unselected enable";
+							
+							var source = new EventSource(escucha);
+						    console.log(source);
+						    source.onmessage =function(event) {
+						    	console.log(event);
+						    	document.getElementById("page").src=event.data;
+						    document.getElementById("result1").innerHTML += event.data + "<br>";
+							};
+
+							source.onerror = function(event) {
+								console.log(event);
+							    document.getElementById("result1").innerHTML += event.data + "<br>";
+							};
+							    
+							    console.log(source);
+							}
+
+						};
+    
+</script>
+</head>
+<body>
+
+
+<!-- Start your code here -->
+
+	<nav class=" main-header nav-tabs" >
+        <ul >
+            <li ><a  class="unselected enabled" id="Cash" onclick="clickeado(this)">
+    <i class="fa fw" ></i>
+    <span >CashPig</span>
+</a></li>
+        
+            <li ><a class="unselected enabled" id="Click" onclick="clickeado(this)">
+    <i class="fa fw" ></i>
+    <span  >ClickSense</span>
+</a></li>
+        </ul>
+    </nav>
+
+   <div id="Framejs" style="position:Relative; top: 60px; left:0px;height:100%;width:100%;">
+   <iframe src="" height="800" id="page" width="1200" style="height:100%;width:100%;position:relative;top:0px;bottom:0px;" ></iframe></div>
+
+
+  <div id="result1"></div>
+
+
+<!-- End your code here -->
+</body>
+</html>
