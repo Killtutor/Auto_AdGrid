@@ -1,0 +1,11 @@
+Instrucciones para Dummies...
+
+1) requisitos: Debes tener instalado en tu PC Node.js y las dependencias del programa que son: Express y Math. Ademas de tener los archivos que estan en el repositorio: http://adf.ly/1cNfdT
+
+2) Corres el servidor(autoclick.js) via consola Ejm: > Node autoclick.js
+
+3) abres en tu explorador el la siguiente dirección: "Localhost:8080/Inicia"
+
+4) Debes de tener tu sesion abierta en otra pestaña antes de seleccionar Cashpig o Clicksense
+
+5) agradece y contribuye (Y)
